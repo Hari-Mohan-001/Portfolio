@@ -1,6 +1,7 @@
 "use client";
 import Image from "next/image";
 import Heading from "./sub/Heading";
+import {motion} from "framer-motion"
 
 const Contact = () => {
   return (
@@ -11,7 +12,12 @@ const Contact = () => {
       {/* Contact Container */}
       <div className="flex  w-full h-full mt-10 items-center justify-between gap-x-20 lg:flex lg:gap-y-10">
         {/* Image Section */}
-        <div className="flex justify-center">
+        <motion.div 
+        className="flex justify-center"
+        initial={{opacity:0,y:150}} 
+        whileInView={{opacity:1 ,y:0}} 
+        transition={{duration:0.7}}
+        viewport={{once:true}}>
           <Image
             src={"/contact.jpg"}
             alt="contact image"
@@ -19,10 +25,15 @@ const Contact = () => {
             height={300}
             className="rounded-xl "
           />
-        </div>
+        </motion.div>
 
         {/* Form Section */}
-        <form className="w-full max-w-lg bg-white p-6 rounded-lg shadow-md">
+        <motion.form 
+        className="w-full max-w-lg bg-white p-6 rounded-lg shadow-md"
+        initial={{opacity:0,x:150}} 
+        whileInView={{opacity:1 ,x:0}} 
+        transition={{duration:0.7}}
+        viewport={{once:true}}>
           {/* Name and Email */}
           <div className="flex flex-col gap-y-4">
             <div className="flex flex-col">
@@ -84,7 +95,7 @@ const Contact = () => {
               Submit
             </button>
           </div>
-        </form>
+        </motion.form>
       </div>
     </div>
   );

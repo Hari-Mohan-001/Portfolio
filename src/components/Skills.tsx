@@ -12,7 +12,7 @@ const Skills = () => {
             opacity:1,
             y:0,
             transition:{
-                delay:0.0+i*0.0
+                delay:0.0+i*0.1
             }
         }),
          hidden:{
@@ -26,7 +26,7 @@ const Skills = () => {
           <Heading heading="Skills" />
     
           {/* Skills Grid */}
-          <div className="w-full grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 md:gap-6 lg:gap-8">
+          <div className="w-full grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-2 md:gap-6 lg:gap-4">
             {skills.map((skill, i) => (
               <motion.div
                 custom={i}
@@ -36,14 +36,14 @@ const Skills = () => {
                 whileHover={{ scale: 1.1 }}
                 viewport={{ once: true }}
                 key={i}
-                className="flex flex-col items-center justify-center gap-2 rounded-xl border border-blue-500 bg-zinc-200 px-4 py-4 md:px-5 md:py-6 shadow-md"
+                className="flex flex-col items-center justify-center gap-2 rounded-xl border border-blue-500 bg-zinc-200 px-4 py-4 md:px-0 md:py-3 shadow-md"
               >
                 <Image
                   src={skill.image}
                   alt="skillImage"
                   width={100}
                   height={100}
-                  className="h-10 w-10 md:h-12 md:w-12"
+                  className="h-10 w-10 md:h-12 md:w-16"
                 />
                 <p className="text-sm md:text-base text-center">{skill.title}</p>
               </motion.div>
