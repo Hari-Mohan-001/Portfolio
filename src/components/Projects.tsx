@@ -29,7 +29,7 @@ const Projects = () => {
   return (
     <div id="projects"
       ref={ref}
-      className="flex flex-col py-20 px-5 sm:px-20 lg:px-40 min-h-screen"
+      className="flex flex-col py-20 px-5 sm:px-20 lg:px-32 min-h-screen"
     >
       {/* Heading */}
       <Heading heading="Projects" />

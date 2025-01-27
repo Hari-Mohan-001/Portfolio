@@ -21,13 +21,13 @@ const About = () => {
 
         {/* Text and Link Section */}
         <div className="flex flex-col items-center md:items-start text-center md:text-left gap-4">
-          <span className="text-gray-600 text-sm md:text-base bg-zinc-200 rounded-lg shadow-md p-1 first-letter:pl-3">
+          <span className="text-gray-600 text-sm md:text-base bg-zinc-200 rounded-lg shadow-md p-1 first-letter:pl-3 tracking-wider">
              {aboutText}
           </span>
           <a
             href="/Hari Mohan Resume.pdf"
             download={""}
-            className="flex items-center gap-2 text-blue-600 hover:underline text-sm sm:text-base"
+            className="flex items-center gap-2 text-white  text-sm sm:text-base bg-green-600 rounded-xl p-2"
           >
             <span>Download CV</span>
             <span className="text-lg">📄</span>

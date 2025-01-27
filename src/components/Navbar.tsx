@@ -7,7 +7,8 @@ interface NavbarProps {
   }
 const Navbar : React.FC<NavbarProps> = ({id}) => {
   return (
-    <div className=' fixed flex flex-col w-[80px] h-full left-0 top-0 justify-between border-r border-gray-300 px-4 py-8'>
+    <div className=' fixed flex flex-col w-[85px]
+     h-full left-0 top-0 justify-between border-r border-gray-300 px-4 py-8 z-10'>
         <a href="#home">
             <Image src={"/hari.png"} alt='logo' width={100} height={100} />
         </a>
@@ -22,7 +23,7 @@ const Navbar : React.FC<NavbarProps> = ({id}) => {
                 <span className={`text=[10px] tracking-wider  opacity-0 group-hover:translate-x-0
                  group-hover:opacity-100 transition-all duration-300  text-center
              
-                  ${data.id===id && '-translate-x-0 opacity-100'}`}>{data.title}</span> 
+                  ${data.id===id && '-translate-x-0 opacity-100'} dark:text-white`}>{data.title}</span> 
             </a>
         </div>
          )) }

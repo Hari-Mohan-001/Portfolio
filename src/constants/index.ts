@@ -1,6 +1,6 @@
 //Hero section
 
-export const firstLine = "I am Hari Mohan,"
+export const firstLine = "I'm Hari Mohan,"
 export const secondLine =
 "a self-taught fullstack developer passionate about building scalable and efficient web applications.!!";
 

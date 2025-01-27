@@ -6,6 +6,8 @@ import Hero from "@/components/Hero";
 import Navbar from "@/components/Navbar";
 import Projects from "@/components/Projects";
 import Skills from "@/components/Skills";
+import Loader from "@/components/sub/Loader";
+import Toogle from "@/components/sub/Toogle";
 import { useEffect, useRef, useState } from "react";
 
 export default function Home() {
@@ -38,15 +40,18 @@ return () => {
    },[])
   return (
     <>
+    <Loader/>
+    <Toogle>
     <Navbar id={id}/>
     <div ref={componentRef}>
       <Hero />
       <About/>
       <Experience/>
-      <Skills/>
+      <Skills/>      
       <Projects/> 
       <Contact/>
     </div>
+    </Toogle>
     </>
   );
 }

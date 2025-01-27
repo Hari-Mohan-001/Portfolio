@@ -2,7 +2,7 @@
 import Image from "next/image";
 
 import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
-import { heroIcons } from "@/assets";
+import { socialIcons } from "@/assets";
 import { firstLine, secondLine } from "@/constants";
 import { useState } from "react";
 
@@ -37,7 +37,11 @@ console.log(innerWidth, innerHeight)
   return (
     <div id="home" className="grid place-items-center h-screen px-52" onMouseMove={handleMouseMove} onMouseEnter={handleMouseEnter}>
       <div>
-        <div className="flex flex-col items-center justify-center gap-y-3 font-light capitalize">
+        <motion.div
+        initial={{opacity:0, y:-100}}
+        animate={{opacity:1,y:0}}
+        transition={{delay:0.5}}
+         className="flex flex-col items-center justify-center gap-y-3 font-light capitalize">
           <motion.div className="flex items-center justify-center" style={{
             rotateX: mouseMove? rotateX:0, 
             rotateY: mouseMove? rotateY:0,
@@ -112,21 +116,27 @@ console.log(innerWidth, innerHeight)
               |
             </motion.span>
           </motion.h1>
-        </div>
+        </motion.div>
         {/* Call-to-Action Links */}
-        <div className="mt-5 flex justify-center gap-x-10  text-purple-400">
-          {heroIcons.map((icon, i) => (
+        <motion.div
+        initial={{opacity:0,y:100}}
+        animate={{opacity:1,y:0}}
+        transition={{delay:0.5}}
+         className="mt-5 flex justify-center gap-x-10  text-purple-400">
+          {socialIcons.map((icon, i) => (
             <a
               key={i}
-              href="#"
+              href={icon.link}
+                target="_blank"
+                  rel="noopener noreferrer"
               className="hover:bg-red-500 hover:text-white transition-colors border rounded-lg shadow-lg"
             >
-              {icon}
+              {icon.icon}
             </a>
           ))}
-        </div>
+        </motion.div>
         <a
-          href="#"
+          href="#contact"
           className="mt-6 mx-auto text-lg w-max block rounded-lg bg-red-500 px-3 py-2 text-white
              font-light capitalize tracking-wider hover:bg-red-700 transition-colors"
              onMouseEnter={()=> setButtonHover(true)}
