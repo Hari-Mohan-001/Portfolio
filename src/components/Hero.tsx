@@ -13,7 +13,7 @@ const Hero = () => {
   const x = useMotionValue(0);
   const y = useMotionValue(0);
 
-  const handleMouseMove = (e:any)=>{
+  const handleMouseMove = (e:React.MouseEvent<HTMLDivElement>)=>{
     const {clientX, clientY} = e
     x.set(clientX)
     y.set(clientY)

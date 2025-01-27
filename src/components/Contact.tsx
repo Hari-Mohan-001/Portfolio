@@ -25,7 +25,7 @@ const Contact = () => {
     return Object.keys(newErrors).length === 0;
   };
 
-  const sendEmail = (e: any) => {
+  const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (!validateForm()) {
       console.log('Validation failed');

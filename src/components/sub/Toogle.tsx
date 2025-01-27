@@ -4,7 +4,7 @@ import { moonIcon, sunIcon } from '@/assets'
 import React, { useEffect, useRef, useState } from 'react'
 import {reactLocalStorage} from "reactjs-localstorage"
 
-const Toogle = ({children}:{children:any}) => {
+const Toogle = ({children}:{children:React.ReactNode}) => {
     const[darkTheme , setDarkThem] = useState(false)
     const mainRef = useRef<HTMLDivElement | null>(null);
 
