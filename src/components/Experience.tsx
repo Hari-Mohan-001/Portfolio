@@ -9,7 +9,7 @@ import Heading from "./sub/Heading";
 
 const Experience = () => {
     return (
-      <div className="relative max-w-4xl  mx-auto py-10 ">
+      <div id="experience" className="relative max-w-4xl  mx-auto py-10 ">
          <div className="flex   items-center justify-between ">
         {/* Heading */}
         <Heading heading="Experience"/>

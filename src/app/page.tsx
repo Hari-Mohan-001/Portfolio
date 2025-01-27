@@ -1,14 +1,45 @@
-
+"use client"
 import About from "@/components/About";
 import Contact from "@/components/Contact";
 import Experience from "@/components/Experience";
 import Hero from "@/components/Hero";
+import Navbar from "@/components/Navbar";
 import Projects from "@/components/Projects";
 import Skills from "@/components/Skills";
+import { useEffect, useRef, useState } from "react";
 
 export default function Home() {
+
+  const [id, setId] = useState<string | undefined>(undefined);
+  const componentRef = useRef<HTMLDivElement | null>(null);
+
+   useEffect(()=>{
+  const observer = new IntersectionObserver((entries)=>{
+    entries.forEach((entry)=>{
+      const intersecting = entry.isIntersecting
+      if(intersecting){
+        setId(entry.target.id)
+      }
+    })
+  },{threshold:0.3})
+
+// Check if componentRef.current is not null before accessing it
+if (componentRef.current) {
+  const componentsArray = Array.from(componentRef.current.children);
+  componentsArray.forEach((comp) => {
+    observer.observe(comp);
+  });
+}
+
+// Cleanup observer on component unmount
+return () => {
+  observer.disconnect();
+};
+   },[])
   return (
-    <div>
+    <>
+    <Navbar id={id}/>
+    <div ref={componentRef}>
       <Hero />
       <About/>
       <Experience/>
@@ -16,5 +47,6 @@ export default function Home() {
       <Projects/> 
       <Contact/>
     </div>
+    </>
   );
 }

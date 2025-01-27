@@ -6,10 +6,10 @@ import Heading from './sub/Heading'
 
 const About = () => {
   return (
-    <div className="flex flex-col min-h-screen px-5 sm:px-10 lg:px-20 xl:px-40 items-center justify-center">
+    <div id='about' className="flex flex-col min-h-screen px-5 sm:px-10 lg:px-40 xl:px-52 items-center justify-center ">
       <Heading heading='About'/>
 
-      <div className="flex flex-col md:flex-row w-full items-center md:justify-between gap-8 md:gap-16">
+      <div className="flex flex-col md:flex-row w-full items-center md:justify-between gap-8 md:gap-16 mt-10">
         {/* Image Section */}
         <Image
           src={'/about.png'}

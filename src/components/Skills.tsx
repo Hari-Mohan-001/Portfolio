@@ -21,7 +21,7 @@ const Skills = () => {
          }
     }
     return (
-        <div className="min-h-screen flex flex-col px-6 md:px-12 lg:px-24 xl:px-40 gap-y-20 justify-center items-center mt-16">
+        <div id="skills" className="min-h-screen flex flex-col px-6 md:px-12 lg:px-24 xl:px-40 gap-y-20 justify-center items-center mt-16">
           {/* Heading */}
           <Heading heading="Skills" />
     

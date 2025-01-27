@@ -35,7 +35,7 @@ console.log(innerWidth, innerHeight)
 
 
   return (
-    <div className="grid place-items-center h-screen" onMouseMove={handleMouseMove} onMouseEnter={handleMouseEnter}>
+    <div id="home" className="grid place-items-center h-screen px-52" onMouseMove={handleMouseMove} onMouseEnter={handleMouseEnter}>
       <div>
         <div className="flex flex-col items-center justify-center gap-y-3 font-light capitalize">
           <motion.div className="flex items-center justify-center" style={{

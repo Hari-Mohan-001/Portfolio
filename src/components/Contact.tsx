@@ -5,7 +5,7 @@ import {motion} from "framer-motion"
 
 const Contact = () => {
   return (
-    <div className="min-h-screen px-6 py-16 lg:px-20 xl:px-40 flex flex-col items-center">
+    <div id="contact" className="h-screen px-6 py-4 lg:px-20 xl:px-40 flex flex-col items-center">
       {/* Heading */}
       <Heading heading="Contact Me" />
 
