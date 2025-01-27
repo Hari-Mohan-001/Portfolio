@@ -12,10 +12,10 @@ setLLoad(true)
     <motion.div
     initial={{top:0}}
     animate={{top:load? '-100%':0}}
-    transition={{duration:0.5}} 
+    transition={{duration:0.7}} 
     className='w-full h-full fixed top-0 left-0 flex justify-center 
     items-center bg-gradient-to-t from-yellow-50 to-red-100 z-50'>
-        <Image src="horse.gif" alt="loader" /> 
+        <Image src="/horse.gif" alt="loader" width={250} height={250} /> 
     </motion.div>
   )
 }

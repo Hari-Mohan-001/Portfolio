@@ -57,8 +57,10 @@ const Projects = () => {
                 objectFit="cover"
                 className="rounded-t-lg w-[300px] h-[200px]"
               />
+               <h4 className="font-semibold text-lg">{project.title}</h4>
             </div>
             <div className="mt-2">
+             
               <p className="mb-3">{project.description}</p>
               {/* Tech Stack */}
               <div className="flex flex-wrap gap-2 mb-3">

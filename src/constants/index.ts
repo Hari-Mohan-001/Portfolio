@@ -24,7 +24,7 @@ export const experiences = [
     },
     {
       id: 2,
-      title: "Area In Charge Sales and Marketting",
+      title: "Area In Charge - Sales and Marketting",
       company: "Ocean Polymer technologies Pvt Ltd",
       duration: "2018 - 2023",
       description: "Increased sales revenue by 40% through effective marketing strategies.",
@@ -34,7 +34,7 @@ export const experiences = [
       title: "HSE Officer",
       company: "Hyndai Engineering & Constructions",
       duration: "2016 - 2017",
-      description: "Organized and led health and safety training sessions for employees, enhancing awareness and compliance",
+      description: "Organized and lead health and safety training sessions for employees, enhancing awareness and compliance",
     },
     {
       id: 4,
@@ -90,7 +90,7 @@ export const experiences = [
     },
     {
         title:"Axios",
-        image: '/skills/axios.png'   
+        image: '/skills/Axios.png'   
     },
     {
         title:"Bootstrap",
@@ -106,7 +106,7 @@ export const experiences = [
     },
     {
         title:"Figma",
-        image: '/skills/figma.png'   
+        image: '/skills/Figma.png'   
     },
     {
         title:"Firebase",
@@ -142,7 +142,7 @@ export const experiences = [
     }, 
     {
         title:"Npm",
-        image: '/skills/npm.png'   
+        image: '/skills/Npm.png'   
     }, 
     {
         title:"O Auth",
